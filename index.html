@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            almost_white: 'hsl(0, 0%, 98%)',
+            medium_gray: 'hsl(0, 0%, 41%)',
+            almost_black: 'hsl(0, 0%, 8%)'
+          },
+          fontFamily: {
+            epilogue: 'Epilogue, sans-serif',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="body_page">
+  <div class="h-full w-full absolute z-10 bg-black opacity-60 hidden" id="overlay"></div>
+  <header class="font-epilogue">
+    <nav id="mobile_nav" class="h-6 p-4 w-full">
+      <div class="flex justify-between">
+        <img class="h-6" src="./images/logo.svg" alt="Logo">
+        <img class="h-4 cursor-pointer" id="icon_menu" src="./images/icon-menu.svg" alt="Icon Menu">
+      </div>
+      
+      <div class="hidden bg-white shadow-md fixed z-20 top-0 right-0 h-full w-2/3 p-5 text-xs leading-7 overflow-auto" id="mobile_nav_slider">
+        <img class="h-5 absolute right-0 mr-5 cursor-pointer" id="icon_close" src="/images/icon-close-menu.svg" alt="Close Menu">
+        
+        <ul class="mt-12 mb-8 leading-8">
+          <li class="flex items-center gap-2" id="feature_list">
+            <a href="#" class="">Features</a>
+            <img class="cursor-pointer" id="arrow_down_features" src="./images/icon-arrow-down.svg" alt="Arrow Down">
+            <img class="hidden cursor-pointer" id="arrow_up_features" src="./images/icon-arrow-up.svg" alt="Arrow Up">
+          </li>
+
+          <div class="py-2 px-4 hidden" id="features_dropdown_mobile">
+            <ul>
+              <li class="flex items-center gap-2">
+                <img src="./images/icon-todo.svg" alt="Icon Todo">
+                <a href="#">Todo List</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <img src="./images/icon-calendar.svg" alt="Icon Calendar">
+                <a href="">Calendar</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <img src="./images/icon-reminders.svg" alt="Icon Reminders">
+                <a href="#">Reminder</a></li>
+              <li class="flex items-center gap-2">
+                <img src="./images/icon-planning.svg" alt="Icon Planning">
+                <a href="#">Planning</a>
+              </li>
+            </ul>
+          </div>
+
+          <li class="flex items-center gap-2" id="company_list">
+            <a href="#">Company</a>
+            <img class="cursor-pointer" id="arrow_down_company" src="./images/icon-arrow-down.svg" alt="Arrow Down">
+            <img class="hidden cursor-pointer" id="arrow_up_company" src="./images/icon-arrow-up.svg" alt="Arrow Up">
+          </li>
+
+          <div class="py-2 px-4 hidden" id="company_dropdown_mobile">
+            <ul>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <li><a href="#">Careers</a></li>
+
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <ul class="text-center leading-8">
+          <li>Login</li>
+          <li class="border-2 border-black rounded-xl">Register</li>
+        </ul>
+      </div>
+        
+      </div>
+    </nav>
+
+    <nav id="desktop_nav"></nav>
+  </header>
+  
+  <main class="font-epilogue px-4">
+    <img class="my-6 w-full h-auto" src="./images/image-hero-mobile.png" alt="Hero Mobile">
+
+    <div class="my-8 text-almost_black">
+      <h1 class="text-2xl font-bold text-center mb-3">Make remote work</h1>
+      <p class="text-xs text-center text-medium_gray font-semibold">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class="mx-auto block my-6 text-xs font-bold bg-black text-white px-4 py-3 rounded-xl tracking-wider">Learn more</button>
+    </div>
+
+    <article class="flex gap-5 justify-between mb-8">
+      <img class="h-3" src="./images/client-databiz.svg" alt="Client Databiz">
+      <img class="h-3" src="./images/client-audiophile.svg" alt="Client Audiophile">
+      <img class="h-3" src="./images/client-meet.svg" alt="Client Meet">
+      <img class="h-3" src="./images/client-maker.svg" alt="Client Maker">
+    </article>
+  </main>
+ 
+ 
+  <footer class="text-[8px] font-epilogue text-center py-1 text-almost_white bg-almost_black">
+    Challenge by <a class="font-semibold" href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="font-semibold" target="_blank" href="https://azalyarahmatika.com">Azalya Rahmatika</a>.
+  </footer>
+  
+  <script>
+    const iconMenu = document.querySelector('#icon_menu');
+    const iconClose = document.querySelector('#icon_close');
+    const overlay = document.querySelector('#overlay');
+    const bodyPage = document.querySelector('body');
+    const mobileNavSlider = document.querySelector('#mobile_nav_slider');
+    const featureList = document.querySelector('#feature_list');
+    const companyList = document.querySelector('#company_list');
+
+    const arrowDownFeatures = document.querySelector('#arrow_down_features');
+    const arrowUpFeatures = document.querySelector('#arrow_up_features');
+
+    const arrowDownCompany = document.querySelector('#arrow_down_company');
+    const arrowUpCompany = document.querySelector('#arrow_up_company');
+    
+    const featuresDropdownMobile = document.querySelector('#features_dropdown_mobile');
+    const companyDropdownMobile = document.querySelector('#company_dropdown_mobile');
+
+
+    iconMenu.addEventListener('click', ()=>{
+      mobileNavSlider.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      bodyPage.classList.add('overflow-clip')
+    });
+
+    iconClose.addEventListener('click', ()=>{
+      mobileNavSlider.classList.add('hidden');
+      overlay.classList.add('hidden');
+      bodyPage.classList.remove('overflow-clip')
+    })
+
+    featureList.addEventListener('click', ()=>{
+      if(featuresDropdownMobile.classList.contains('hidden')) {
+        featuresDropdownMobile.classList.remove('hidden');
+        arrowUpFeatures.classList.remove('hidden');
+        arrowDownFeatures.classList.add('hidden');
+      } else {
+        featuresDropdownMobile.classList.add('hidden');
+        arrowUpFeatures.classList.add('hidden');
+        arrowDownFeatures.classList.remove('hidden');
+      }
+    });
+
+    companyList.addEventListener('click', ()=>{
+      if(companyDropdownMobile.classList.contains('hidden')) {
+        companyDropdownMobile.classList.remove('hidden');
+        arrowUpCompany.classList.remove('hidden');
+        arrowDownCompany.classList.add('hidden');
+      } else {
+        companyDropdownMobile.classList.add('hidden');
+        arrowDownCompany.classList.remove('hidden');
+        arrowUpCompany.classList.add('hidden');
+      }
+    });
+
+  </script>
+</body>
+</html>
