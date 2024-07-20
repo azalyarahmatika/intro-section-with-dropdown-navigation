@@ -33,7 +33,7 @@
 <body class="body_page h-screen flex flex-col justify-between overflow-auto gap-5 sm:bg-almost_white">
   <div class="lg:pb-10">
     <div class="h-full w-full absolute z-10 bg-black opacity-60 hidden" id="overlay"></div>
-    <header class="font-epilogue sm:p-4 lg:p-12">
+    <header class="font-epilogue p-2 sm:p-6 lg:px-12 lg:p-2">
       <nav id="mobile_nav" class="h-6 p-4 w-full sm:hidden">
         <div class="flex justify-between">
           <img class="h-6" src="./images/logo.svg" alt="Logo">
@@ -105,7 +105,7 @@
               <img class="cursor-pointer" id="arrow_down_features_desktop" src="./images/icon-arrow-down.svg" alt="Arrow Down">
               <img class="hidden cursor-pointer" id="arrow_up_features_desktop" src="./images/icon-arrow-up.svg" alt="Arrow Up">
 
-              <div class="py-4 px-6 hidden absolute bg-white rounded-lg top-10 -left-12" id="features_dropdown_desktop">
+              <div class="py-4 px-6 hidden absolute bg-white rounded-lg top-10 -left-12 shadow-2xl" id="features_dropdown_desktop">
                 <ul class="flex flex-col gap-4">
                   <li class="flex items-center gap-2">
                     <img src="./images/icon-todo.svg" alt="Icon Todo">
@@ -131,7 +131,7 @@
               <img class="cursor-pointer" id="arrow_down_company_desktop" src="./images/icon-arrow-down.svg" alt="Arrow Down">
               <img class="hidden cursor-pointer" id="arrow_up_company_desktop" src="./images/icon-arrow-up.svg" alt="Arrow Up">
             
-              <div class="py-4 px-6 hidden absolute bg-white rounded-lg top-10" id="company_dropdown_desktop">
+              <div class="py-4 px-6 hidden absolute bg-white rounded-lg top-10 shadow-2xl" id="company_dropdown_desktop">
                 <ul class="flex flex-col gap-4 text_medium_gray">
                   <li><a class="hover:text-almost_black" href="#">History</a></li>
                   <li><a class="hover:text-almost_black" href="#">Our Team</a></li>
@@ -148,7 +148,7 @@
         <div class="" id="login_desktop">
           <ul class="flex gap-4 items-center text-medium_gray lg:text-sm lg:gap-6">
             <li class="hover:text-almost_black"><a href="#">Login</a></li>
-            <li class="px-3 py-1 border-2 border-black rounded-xl bg-black text-white hover:text-black hover:bg-transparent cursor-pointer">Register</li>
+            <li class="leading-7 px-5 py-1 border-2 border-black rounded-xl hover:bg-black hover:text-white text-black bg-transparent cursor-pointer">Register</li>
           </ul>
         </div>
       </nav>
