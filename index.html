@@ -91,93 +91,93 @@
   
           <ul class="text-center leading-8">
             <li>Login</li>
-            <li class="border-2 border-black rounded-xl">Register</li>
+            <li class="border-2 border-black rounded-xl bg-black text-white hover:text-black hover:bg-transparent cursor-pointer">Register</li>
           </ul>
         </div>
       </nav>
   
-      <nav class="hidden sm:flex sm:justify-between sm:text-xs sm:py-3 lg:py-10 lg:px-8 lg:text-base text-almost_black" id="desktop_nav">
+      <nav class="hidden sm:flex sm:justify-between sm:text-xs sm:py-3 lg:py-8 lg:px-8 lg:text-base text-almost_black text-epilogue" id="desktop_nav">
         <div class="flex justify-between gap-6 items-center">
           <img class="h-6 lg:h-8" src="./images/logo.svg" alt="Logo">
-          <ul class="flex gap-4 items-center">
-            <li class="flex items-center gap-2" id="feature_list">
-              <a href="#" class="">Features</a>
-              <img class="cursor-pointer" id="arrow_down_features" src="./images/icon-arrow-down.svg" alt="Arrow Down">
-              <img class="hidden cursor-pointer" id="arrow_up_features" src="./images/icon-arrow-up.svg" alt="Arrow Up">
+          <ul class="flex gap-4 items-center relative text-medium_gray ">
+            <li class="flex items-center gap-2 text_medium_gray" id="feature_list_desktop">
+              <a href="#" class="hover:text-almost_black">Features</a>
+              <img class="cursor-pointer" id="arrow_down_features_desktop" src="./images/icon-arrow-down.svg" alt="Arrow Down">
+              <img class="hidden cursor-pointer" id="arrow_up_features_desktop" src="./images/icon-arrow-up.svg" alt="Arrow Up">
+
+              <div class="py-4 px-6 hidden absolute bg-white rounded-lg top-10 -left-12" id="features_dropdown_desktop">
+                <ul class="flex flex-col gap-4">
+                  <li class="flex items-center gap-2">
+                    <img src="./images/icon-todo.svg" alt="Icon Todo">
+                    <a class="hover:text-almost_black" href="#">Todo List</a>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="./images/icon-calendar.svg" alt="Icon Calendar">
+                    <a class="hover:text-almost_black" href="#">Calendar</a>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="./images/icon-reminders.svg" alt="Icon Reminders">
+                    <a class="hover:text-almost_black" href="#">Reminder</a></li>
+                  <li class="flex items-center gap-2">
+                    <img src="./images/icon-planning.svg" alt="Icon Planning">
+                    <a class="hover:text-almost_black" href="#">Planning</a>
+                  </li>
+                </ul>
+              </div>
             </li>
   
-            <div class="py-2 px-4 hidden" id="features_dropdown_mobile">
-              <ul>
-                <li class="flex items-center gap-2">
-                  <img src="./images/icon-todo.svg" alt="Icon Todo">
-                  <a href="#">Todo List</a>
-                </li>
-                <li class="flex items-center gap-2">
-                  <img src="./images/icon-calendar.svg" alt="Icon Calendar">
-                  <a href="">Calendar</a>
-                </li>
-                <li class="flex items-center gap-2">
-                  <img src="./images/icon-reminders.svg" alt="Icon Reminders">
-                  <a href="#">Reminder</a></li>
-                <li class="flex items-center gap-2">
-                  <img src="./images/icon-planning.svg" alt="Icon Planning">
-                  <a href="#">Planning</a>
-                </li>
-              </ul>
-            </div>
-  
-            <li class="flex items-center gap-2" id="company_list">
-              <a href="#">Company</a>
-              <img class="cursor-pointer" id="arrow_down_company" src="./images/icon-arrow-down.svg" alt="Arrow Down">
-              <img class="hidden cursor-pointer" id="arrow_up_company" src="./images/icon-arrow-up.svg" alt="Arrow Up">
+            <li class="flex items-center gap-2" id="company_list_desktop">
+              <a class="hover:text-almost_black" href="#">Company</a>
+              <img class="cursor-pointer" id="arrow_down_company_desktop" src="./images/icon-arrow-down.svg" alt="Arrow Down">
+              <img class="hidden cursor-pointer" id="arrow_up_company_desktop" src="./images/icon-arrow-up.svg" alt="Arrow Up">
+            
+              <div class="py-4 px-6 hidden absolute bg-white rounded-lg top-10" id="company_dropdown_desktop">
+                <ul class="flex flex-col gap-4 text_medium_gray">
+                  <li><a class="hover:text-almost_black" href="#">History</a></li>
+                  <li><a class="hover:text-almost_black" href="#">Our Team</a></li>
+                  <li><a class="hover:text-almost_black" href="#">Blog</a></li>
+                </ul>
+              </div>
             </li>
   
-            <div class="py-2 px-4 hidden" id="company_dropdown_mobile">
-              <ul>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </div>
+            <li class="hover:text-almost_black"><a href="#">Careers</a></li>
   
-            <li><a href="#">Careers</a></li>
-  
-            <li><a href="#">About</a></li>
+            <li class="hover:text-almost_black"><a href="#">About</a></li>
           </ul>
         </div>
         <div class="" id="login_desktop">
           <ul class="flex gap-4 items-center">
             <li>Login</li>
-            <li class="px-2 py-1 border-2 border-black rounded-md">Register</li>
+            <li class="px-3 py-1 border-2 border-black rounded-xl bg-black text-white hover:text-black hover:bg-transparent cursor-pointer">Register</li>
           </ul>
         </div>
       </nav>
     </header>
     
-    <main class="font-epilogue sm:flex sm:flex-row-reverse sm:items-center sm:gap-5 sm:px-10 lg:px-32 lg:gap-10">  
-      <img class="my-6 w-full h-auto sm:hidden" src="./images/image-hero-mobile.png" alt="Hero Mobile">
+    <main class="font-epilogue sm:flex sm:flex-row-reverse sm:items-center sm:gap-5 sm:px-10 lg:px-40 lg:gap-10 h-96 lg:justify-between">
+      <div class="flex justify-end h-full w-full">
+        <img class="my-6 w-full h-auto sm:hidden" src="./images/image-hero-mobile.png" alt="Hero Mobile">
   
-      <img class="hidden sm:block sm:h-60 lg:h-96 lg:w-1/2 lg:gap-52" src="./images/image-hero-desktop.png" alt="Hero Desktop">
+        <img class="hidden sm:block  lg:h-auto lg:gap-52" src="./images/image-hero-desktop.png" alt="Hero Desktop">
+      </div>
 
-      <div class="sm:flex sm:flex-col sm:justify-between sm:h-60 lg:h-80">
-        <div class="my-8 text-almost_black px-4 sm:mb-0">
+      <div class="sm:flex sm:flex-col sm:justify-between sm:h-full">
+        <div class="my-8 text-almost_black pr-4 sm:mb-0 lg:shrink-0">
           <h1 class="text-3xl font-bold text-center mb-3 sm:text-start lg:text-5xl">Make remote work</h1>
           <p class="text-sm lg:text-base text-center text-medium_gray font-semibold sm:text-start">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
           <button class="mx-auto block my-6 text-xs font-bold bg-black text-white px-4 py-3 rounded-xl tracking-wider sm:mx-0">Learn more</button>
         </div>
-        <article class="flex gap-5 justify-between mb-8 px-4 sm:mb-0">
-          <img class="h-3 lg:h-6" src="./images/client-audiophile.svg" alt="Client Audiophile">
-          <img class="h-3 lg:h-6" src="./images/client-meet.svg" alt="Client Meet">
-          <img class="h-3 lg:h-6" src="./images/client-maker.svg" alt="Client Maker">
-          <img class="h-3 lg:h-6" src="./images/client-databiz.svg" alt="Client Databiz">
+        <article class="flex gap-5 justify-between mb-8 px-4 sm:mb-0 ">
+          <img class="h-3 lg:h-4" src="./images/client-audiophile.svg" alt="Client Audiophile">
+          <img class="h-3 lg:h-4" src="./images/client-meet.svg" alt="Client Meet">
+          <img class="h-3 lg:h-4" src="./images/client-maker.svg" alt="Client Maker">
+          <img class="h-3 lg:h-4" src="./images/client-databiz.svg" alt="Client Databiz">
         </article>
       </div>
-  
-      
     </main>
   </div>
   
-  <footer class="text-xs font-epilogue text-center py-1 text-almost_white bg-almost_black">
+  <footer class="text-xs font-epilogue text-center py-1 lg:mt-10 text-almost_white bg-almost_black">
     Challenge by <a class="font-semibold" href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">Frontend Mentor</a>. 
     Coded by <a class="font-semibold" target="_blank" href="https://azalyarahmatika.com">Azalya Rahmatika</a>.
   </footer>
